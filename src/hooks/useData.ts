@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import apiClient from "../services/api-client";
+import { CanceledError } from "axios";
 
 interface Data {
     id: number;
@@ -25,6 +26,7 @@ const useData = <T extends Data>(endpoint: string) => {
             setLoading(false)
             setData(res.data.results)})
         .catch(err => {
+            if(err instanceof CanceledError) return;
             setLoading(false)
             setError(err.message)})
 

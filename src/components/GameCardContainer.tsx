@@ -8,7 +8,7 @@ interface Props {
 function GameCardContainer({ children }: Props) {
   return (
     <Box
-      minWidth={"300px"}
+      width={"100%"}
       borderRadius={"10px"}
       overflow={"hidden"}
       maxWidth={"sm"}
