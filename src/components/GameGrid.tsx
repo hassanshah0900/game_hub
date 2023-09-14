@@ -14,7 +14,7 @@ function GameGrid() {
         columns={{ base: 1, md: 2, lg: 3 }}
         spacing={"20px"}
         justifyItems={"center"}
-        padding={"10px"}
+        paddingX={"10px"}
       >
         {isLoading &&
           skeletons.map((skeleton) => (
