@@ -29,8 +29,8 @@ function App() {
         </GridItem>
       </Show>
       <GridItem
-        justifySelf={"center"}
-        maxWidth={{ base: "sm", md: "100%" }}
+        justifySelf={{ base: "center", lg: "auto" }}
+        maxWidth={{ base: "md", md: "3xl", lg: "100%" }}
         paddingX={"10px"}
         area={"main"}
       >
