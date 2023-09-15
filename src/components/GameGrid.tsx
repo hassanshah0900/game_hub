@@ -19,7 +19,6 @@ function GameGrid({ selectedGenre }: Props) {
         columns={{ base: 1, md: 2, lg: 3 }}
         spacing={"20px"}
         justifyItems={"center"}
-        paddingX={"10px"}
       >
         {isLoading &&
           skeletons.map((skeleton) => (
