@@ -15,7 +15,11 @@ function GameCard({ game }: Props) {
         <Heading fontSize={"2xl"}>{game.name}</Heading>
         <HStack justifyContent={"space-between"}>
           <PlatformIconLIst
-            platforms={game.parent_platforms.map(({ platform }) => platform)}
+            platforms={
+              game.parent_platforms
+                ? game.parent_platforms.map(({ platform }) => platform)
+                : []
+            }
           />
           <CriticScore criticScore={game.metacritic} />
         </HStack>
