@@ -15,7 +15,7 @@ function GameGrid({ gameQuery }: Props) {
     <>
       {error && <Text>{error}</Text>}
       <SimpleGrid
-        columns={{ base: 1, md: 2, lg: 3 }}
+        columns={{ base: 1, md: 2, lg: 3, xl: 4 }}
         spacing={"20px"}
         justifyItems={"center"}
       >

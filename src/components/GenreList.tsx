@@ -21,17 +21,20 @@ function GenreList({ onSelecteGenre, selectedGenre }: Props) {
   if (error) return null;
   return (
     <>
-      <Heading fontSize="2xl" marginBottom={4}>
+      <Heading
+        fontSize={{ base: "2xl", xl: "4xl" }}
+        marginBottom={{ base: 4, xl: 8 }}
+      >
         Genre
       </Heading>
       <List>
         {genres.map((genre) => (
-          <ListItem paddingBottom={"10px"} key={genre.id}>
+          <ListItem paddingBottom={{ base: "10px", xl: "15px" }} key={genre.id}>
             <HStack>
               <Image
                 objectFit="cover"
                 borderRadius={"5px"}
-                boxSize={"35px"}
+                boxSize={{ base: "35px", xl: "50px" }}
                 src={getCroppedImageUrl(genre.image_background)}
               />
               <Button
@@ -41,7 +44,7 @@ function GenreList({ onSelecteGenre, selectedGenre }: Props) {
                   onSelecteGenre(genre);
                 }}
                 variant="link"
-                fontSize={"md"}
+                fontSize={{ base: "lg", xl: "2xl" }}
                 fontWeight={genre.id === selectedGenre?.id ? "bold" : "normal"}
               >
                 {genre.name}
