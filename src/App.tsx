@@ -28,7 +28,12 @@ function App() {
           />
         </GridItem>
       </Show>
-      <GridItem paddingX={"10px"} area={"main"}>
+      <GridItem
+        justifySelf={"center"}
+        maxWidth={{ base: "sm", md: "100%" }}
+        paddingX={"10px"}
+        area={"main"}
+      >
         <HStack marginBottom={"25px"} spacing={5}>
           <PlatformSelector
             selectedPlatform={gameQuery.platform}

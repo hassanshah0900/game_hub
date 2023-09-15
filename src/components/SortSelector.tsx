@@ -28,13 +28,7 @@ function SortSelector({ onSelectSort, selectedSortValue }: Props) {
   return (
     <Menu>
       <MenuButton as={Button} rightIcon={<BsChevronDown />}>
-        Order by:{" "}
-        <Highlight
-          query={displaySortValue}
-          styles={{ color: "white", fontWeight: "bold" }}
-        >
-          {displaySortValue}
-        </Highlight>
+        Order by: {displaySortValue}
       </MenuButton>
       <MenuList>
         {sortOrders.map((sortOrder) => (
