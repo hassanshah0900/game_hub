@@ -35,7 +35,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build Image
-        run: docker image build -t game-hub
+        run: docker image build -t game-hub .
 
       - name: Tag Image
         run: docker image tag game-hub ${{vars.DOCKER_HUB_USERNAME}}/game-hub
